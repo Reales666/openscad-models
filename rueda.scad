@@ -22,15 +22,15 @@ module crearRueda(pDiametroRadios, pAnchuraRueda, pAnchuraEje, pRadioExteriorRue
 				//Llanta
 				difference()
 				{
-					cylinder(anchuraRueda, r = radioExteriorRueda, $fn = 1000, center = true);
-					cylinder(anchuraRueda + 1, r = radioInteriorRueda, $fn = 1000, center = true);
+					cylinder(anchuraRueda, r = radioExteriorRueda, center = true);
+					cylinder(anchuraRueda + 1, r = radioInteriorRueda, center = true);
 				}
 			
 				//Eje
 				difference()
 				{
 					cylinder(anchuraEje, r = radioExteriorEje, center = true);
-					cylinder(anchuraEje + 1, r = radioInteriorEje, $fn = 100, center = true);		
+					cylinder(anchuraEje + 1, r = radioInteriorEje, center = true);		
 				}
 			
 				//Radio
@@ -38,9 +38,9 @@ module crearRueda(pDiametroRadios, pAnchuraRueda, pAnchuraEje, pRadioExteriorRue
 				{
 					rotate([90,0,0])
 					{	
-						cylinder(longitudRadios, d = diametroRadios, $fn = 50, center = true);
+						cylinder(longitudRadios, d = diametroRadios, center = true);
 					}
-					cylinder(diametroRadios + 1, r = radioInteriorEje, $fn = 50, center = true);
+					cylinder(diametroRadios + 1, r = radioInteriorEje, center = true);
 				}
 				
 				//Radio
@@ -48,9 +48,9 @@ module crearRueda(pDiametroRadios, pAnchuraRueda, pAnchuraEje, pRadioExteriorRue
 				{
 					rotate([0,90,30])
 					{
-						cylinder(longitudRadios, d = diametroRadios, $fn = 50, center = true);
+						cylinder(longitudRadios, d = diametroRadios, center = true);
 					}
-					cylinder(diametroRadios + 1, r = radioInteriorEje, $fn = 50, center = true);
+					cylinder(diametroRadios + 1, r = radioInteriorEje, center = true);
 				}
 		
 				//Radio
@@ -58,9 +58,9 @@ module crearRueda(pDiametroRadios, pAnchuraRueda, pAnchuraEje, pRadioExteriorRue
 				{
 					rotate([0,90,-30])
 					{
-						cylinder(longitudRadios, d = diametroRadios, $fn = 50, center = true);
+						cylinder(longitudRadios, d = diametroRadios, center = true);
 					}
-					cylinder(diametroRadios + 1, r = radioInteriorEje, $fn = 50, center = true);
+					cylinder(diametroRadios + 1, r = radioInteriorEje, center = true);
 				}
 			}					
 
@@ -82,16 +82,16 @@ module crearRueda(pDiametroRadios, pAnchuraRueda, pAnchuraEje, pRadioExteriorRue
 				{
 					rotate([0, -90, 0])
 					{
-						cylinder(radioExteriorRueda * 2 + 10, d = 4, $fn = 50, center = true);
+						cylinder(radioExteriorRueda * 2 + 10, d = 4, center = true);
 					}
 				}
 
 				//Canal Junta tórica
-				rotate_extrude($fn = 100)
+				rotate_extrude()
 				{
 					translate([radioInteriorGoma + 2, 0, 0])
 					{
-						circle(d = seccionGoma, $fn = 100);	
+						circle(d = seccionGoma);	
 					}
 				}
 			}
@@ -108,6 +108,9 @@ module crearRueda(pDiametroRadios, pAnchuraRueda, pAnchuraEje, pRadioExteriorRue
 * Radio exterior del eje
 * Radio interior del eje
 */
+$fa = 1;
+$fs = 3;
+
 crearRueda(10, 10, 10, 60, 45, 15, 3);
 
 /*

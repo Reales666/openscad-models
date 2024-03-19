@@ -12,16 +12,16 @@ color("Red")
 			translate([24.5,24.5,2])	//Agujero Eje motor
 				cylinder(10, d = 25, center = true, $fn = 100);
 
-			#translate([9,9,2])	//Tornillo Motor
+			translate([9,9,2])	//Tornillo Motor
 				cylinder(10, d = 4, center = true, $fn = 50);
 	
-			#translate([9,40,2])	//Tornillo Motor
+			translate([9,40,2])	//Tornillo Motor
 				cylinder(10, d = 4, center = true, $fn = 50);
 	
-			#translate([40,9,2])	//Tornillo Motor
+			translate([40,9,2])	//Tornillo Motor
 				cylinder(10, d = 4, center = true, $fn = 50);
 	
-			#translate([40,40,2])	//Tornillo Motor
+			translate([40,40,2])	//Tornillo Motor
 				cylinder(10, d = 4, center = true, $fn = 50);
 	
 			//Agujeros tornillos fijación Caja
