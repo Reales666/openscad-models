@@ -1,6 +1,3 @@
-$fa = 1;
-$fs = 0.4;
-
 module ultrasonic_distance_sensor() {
     difference() {
         union() {

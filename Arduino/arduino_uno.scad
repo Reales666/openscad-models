@@ -15,16 +15,6 @@ module arduino_uno_board() {
 		color("SteelBlue")
 			difference() {
 				cube([board_wide, board_lenght, board_thick]); // Base board
-
-				// Remove the screw holes
-				translate([15, 3.5, -0.5])
-					screw_hole();
-				translate([15, 49.3, -0.5])
-					screw_hole();
-				translate([66, 35, -0.5])
-					screw_hole();
-				translate([66, 7, -0.5])
-					screw_hole();
 				
 				// Small hole top right
 				translate([65.8, 37.5, -0.5])
@@ -41,6 +31,15 @@ module arduino_uno_board() {
 					text("ARDUINO UNO", board_lenght / 15, "Console");
 			}
 
+		// Remove the screw holes
+		translate([15, 3.5, -2])
+			screw_hole();
+		translate([15, 49.3, -2])
+			screw_hole();
+		translate([66, 35, -2])
+			screw_hole();
+		translate([66, 7, -2])
+			screw_hole();
 		
 
 		// USB A port
