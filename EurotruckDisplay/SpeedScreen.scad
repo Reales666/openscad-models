@@ -1,7 +1,7 @@
 include <microservo_SG90.scad>
 
-//$fa = 1;
-//$fs = 0.4;
+$fa = 1;
+$fs = 0.4;
 
 module counterProfile() {
     translate([-10, 0, 0]) {
@@ -24,16 +24,23 @@ module counterProfile() {
     }
 }
 
+difference() {
+// base
+    union() {
+    
+        difference() {
+            cube([150, 200, 45]);
+            
+            translate([15, 15, -0.1])
+                cube([120, 170, 30]);
+        }
 
-union() {
-    // base
-    difference() {
-        cube([150, 200, 45]);
-        
-        translate([15, 15, -0.1])
-            cube([120, 170, 30]);
+        translate([135, 65, 40])
+            counterProfile();
     }
 
-    translate([135, 65, 40])
-        counterProfile();
+    translate([130, 65, 20])
+        translate([-5 + (22.5 / 2), 6, 0])
+        rotate([0, 0, 180])
+            microservo_SG90();
 }
