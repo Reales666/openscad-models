@@ -1,7 +1,7 @@
 module microservo_SG90() {
     color("blue") 
     {
-        #union() {
+        union() {
             cube(size=[22.6, 12.1, 24.01]);
 
             translate([-5, 0, 19-40]) {
