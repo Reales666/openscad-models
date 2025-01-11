@@ -32,7 +32,7 @@ module lcd_screen(screen_thickness = 0, screws_length = 0) {
             cylinder(r = 1.5, 1.51 + screws_length);
 
         // Pins hole
-        translate([6.3, 50-39.5 - 5.8 - 1.5 + 51.5 + 1.5, 0]) {
+        translate([9, 50-39.5 - 5.8 - 1.5 + 51.5 + 1.5, 0]) {
             cube(size=[40, 4, 8]);
         }
 
