@@ -19,7 +19,8 @@ module clock() {
         cube([21.5, 65, clock_thickness]);
 
     // Clock charger hole
-    translate([clock_radius - 17.5 / 2, 2, -8 + 1.3])
-        cube([40, 6.3, 8]);
+    translate([clock_radius - 21 / 2, 0, -8])
+        rotate([-15, 0, 0])
+            cube([40, 6.3, 10]);
     
 }
