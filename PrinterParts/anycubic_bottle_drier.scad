@@ -3,21 +3,21 @@ $fs = 0.4;
 
 
 difference() {
-    cube([195, 90, 70]);
+    cube([195, 95, 70]);
 
     translate([2.5, -0.5, -0.1]) {
-        cube([190, 91, 10]);
+        cube([190, 98, 10]);
     }
 
-    translate([195/2, 45, 9.5])  {
+    translate([195/2, 47.5, 9.5])  {
         anycubic_bottle();
     }
 
     #translate([-0.1, -0.1, 30])
-        cube([40, 91, 45]);
+        cube([40, 98, 45]);
     
     #translate([155.1, -0.1, 30])
-        cube([40, 91, 45]);
+        cube([40, 98, 45]);
 }
 
 
@@ -25,6 +25,6 @@ difference() {
 module anycubic_bottle() {
     cylinder(r=20.5, h=32);
     translate([0, 0, 31.99]) {
-        cylinder(r=87/2, h=32);
+        cylinder(r=45, h=32);
     }
 }
