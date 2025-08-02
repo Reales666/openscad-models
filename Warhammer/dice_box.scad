@@ -6,8 +6,8 @@ hole_with = 12.31*3;
 hole_lenght = 12.31*3;
 hole_hight = 12.31*2;
 
-magnet_radius = 1.5;
-magnet_lenght = 0.9;
+magnet_radius = 1.55;
+magnet_lenght = 1;
 
 // Dice box
 difference() {
