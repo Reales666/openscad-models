@@ -13,10 +13,17 @@ $fa = 1;
 $fs = 0.4;
 
 tokens_radius = 18/2;
-mirror([])
-translate([10, 0, 0])
+mirror()
+union() {
+
+    translate([76, 40 - 7.5, 12.99])
+        cube([2, 15, 3]);
+
     difference() {
         cube([78, 80, 13]);
+
+        translate([0, 40 - 7.5,10])
+            cube([2, 15, 3]);
 
         // One Blood
         rotate([0, 90, 0])
@@ -60,15 +67,15 @@ translate([10, 0, 0])
 
         // Magnets
         translate([2.5, 2.5, 12.01])
-            #cylinder(r=3.1/2, h=1);
+            cylinder(r=3.3/2, h=1);
 
         translate([2.5, 80 - 2.5, 12.01])
-            #cylinder(r=3.1/2, h=1);
+            cylinder(r=3.3/2, h=1);
 
         translate([78 - 2.5, 2.5, 12.01])
-            #cylinder(r=3.1/2, h=1);
+            cylinder(r=3.3/2, h=1);
 
         translate([78 - 2.5, 80 - 2.5, 12.01])
-            #cylinder(r=3.1/2, h=1);
+            cylinder(r=3.3/2, h=1);
     }
-
+}
